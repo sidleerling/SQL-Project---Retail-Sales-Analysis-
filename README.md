@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project focuses on analyzing retail sales data using MySQL. The dataset includes information on transactions such as sales date, time, customer demographics, product categories, quantities, and revenue metrics. The objective of the project is to clean the data, perform Exploratory Data Analysis and derive business insights using basic to advanced SQL tools such as group by, having clause, case-when statements, Common Table Expressions (CTEs) which are then used to make data-driven decisions in a retail environment.
+This project focuses on analyzing retail sales data using MySQL. The dataset includes information on transactions such as sales date, time, customer demographics, product categories, quantities, and revenue metrics. The objective of the project is to clean the data, perform Exploratory Data Analysis and derive business insights which are would then be used to make data-driven decisions in a retail environment.
 
 ---
 
