@@ -37,13 +37,13 @@ The dataset consists of 2001 rows and 11 columns including the following:
 
 - Created a new database: `retail_sales`
 
-```
+```sql
 create database retail_sales;
 use retail_sales;
 ```
 - Defined the schema for the `retail_sales` table with appropriate data types
 
-```
+```sql
 create table retail_sales (
       transactions_id int primary key,
 	  sale_date	date null,
@@ -60,7 +60,7 @@ create table retail_sales (
 ```
 - Imported the dataset records into the retail_sales table, looked at the first 10 records
 
-```
+```sql
 select * from retail_sales limit 10;
 ```
 
@@ -72,7 +72,7 @@ Performed the following cleaning steps to ensure data quality and consistency:
 
 - Checked for records with any 'NULL' values
 
-```
+```sql
 select * from retail_sales 
 where transactions_id is null or 
       sale_date is null or
@@ -88,7 +88,7 @@ where transactions_id is null or
 ```
 - Removed the NULL values from the table
 
-```
+```sql
 set sql_safe_updates = 0;
 delete from retail_sales 
 where transactions_id is null or 
@@ -103,10 +103,27 @@ where transactions_id is null or
       cogs is null or
       total_sale is null;
 ```
-- Validated the uniqueness of `transactions_id` (primary key)
-- Checked for invalid or inconsistent values in `quantity`, `price_per_unit`, `cogs`, `total_sale`, and `age`
-- Verified time format consistency using `sale_time`
+- Validated the uniqueness of `transactions_id` (primary key) by checking for any duplicate records
 
+```sql
+select count(transactions_id) as duplicate_transactions 
+from retail_sales group by transactions_id having count(transactions_id) > 1;
+```
+- Checked for invalid or inconsistent values in `quantity`, `price_per_unit`, `cogs`, `total_sale','age' columns
+```sql
+select * from retail_sales
+where quantity <= 0 or
+      price_per_unit <= 0 or
+      cogs <= 0 or
+      total_sale <= 0;
+      ;
+```
+```sql
+select * from retail_sales where age <= 0 or age > 105;
+```
+  
+- Verified time format consistency using `sale_time`
+```sql
 ---
 
 ## Data Exploration
