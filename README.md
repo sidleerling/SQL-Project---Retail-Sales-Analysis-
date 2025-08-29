@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project focuses on analyzing retail sales data using MySQL. The dataset includes information on transactions such as sales date, time, customer demographics, product categories, quantities, and revenue metrics. The objective of the project is to clean the data, perform Exploratory Data Analysis and derive business insights which are would then be used to make data-driven decisions in a retail environment.
+This SQL project involves the analysis of a retail sales dataset to uncover actionable business insights. The dataset contains 2,001 records with key fields such as transaction date and time, customer demographics, product categories, quantities sold, cost of goods, and total revenue. The project is structured in three main phases: data cleaning, exploratory data analysis (EDA), and business insight generation. Data cleaning focused on removing null values, correcting data types, and identifying invalid records. EDA helped understand customer demographics, product distribution, and sales patterns. Using advanced SQL techniques such as subqueries, Common Table Expressions (CTEs), and window functions, the analysis provided insights into category performance, seasonal trends, customer behavior, and operational efficiency. These findings can support strategic retail decisions around pricing, promotions, inventory, and customer engagement.
 
 ---
 
