@@ -292,6 +292,7 @@ from hourly_sales group by shift;
 4. **Enhance Customer Loyalty**: Engage top-spending customers with personalized communications and rewards programs to encourage repeat business and referrals.
 
 5. **Optimize Store Hours and Staffing**: Align staffing and promotional activities with peak shopping hours (evenings) to improve customer experience and sales efficiency.
+---
 
 ## Files in This Repository
 
