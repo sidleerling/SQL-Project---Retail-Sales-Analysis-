@@ -40,17 +40,69 @@ The dataset consists of 2001 rows and 11 columns including the following:
 ```
 create database retail_sales;
 use retail_sales;
-
+```
 - Defined the schema for the `retail_sales` table with appropriate data types
-- Inserted dataset records for querying
+
+```
+create table retail_sales (
+      transactions_id int primary key,
+	  sale_date	date null,
+	  sale_time	time null, 
+	  customer_id int null, 
+      gender varchar (15) null,
+      age int null,
+      category varchar (25) null,
+	  quantity	int null, 
+      price_per_unit float null, 
+      cogs float null,
+      total_sale float null
+);
+```
+- Imported the dataset records into the retail_sales table, looked at the first 10 records
+
+```
+select * from retail_sales limit 10;
+```
 
 ---
 
 ## Data Cleaning
 
-Performed the following cleaning steps to ensure data quality:
+Performed the following cleaning steps to ensure data quality and consistency:
 
-- Checked for and deleted rows with `NULL` values
+- Checked for records with any 'NULL' values
+
+```
+select * from retail_sales 
+where transactions_id is null or 
+      sale_date is null or
+      sale_time is null or
+      customer_id is null or 
+      gender is null or 
+      age is null or 
+      category is null or 
+      quantity is null or 
+      price_per_unit is null or
+      cogs is null or
+      total_sale is null;
+```
+- Removed the NULL values from the table
+
+```
+set sql_safe_updates = 0;
+delete from retail_sales 
+where transactions_id is null or 
+      sale_date is null or
+      sale_time is null or
+      customer_id is null or 
+      gender is null or 
+      age is null or 
+      category is null or 
+      quantity is null or 
+      price_per_unit is null or
+      cogs is null or
+      total_sale is null;
+```
 - Validated the uniqueness of `transactions_id` (primary key)
 - Checked for invalid or inconsistent values in `quantity`, `price_per_unit`, `cogs`, `total_sale`, and `age`
 - Verified time format consistency using `sale_time`
