@@ -281,6 +281,18 @@ from hourly_sales group by shift;
 - This could be explained by the fact that during weekdays, people would have work the entire day and once they finish work, they might head to the retail stores of malls to buy products or on weekends, they would probably plan on going shopping in the evening, eat at a restaurant or watch a movie instead of the afternoon where it is often sunny and hot, especially during Summer.
 ---
 
+## Strategic Recommendations 
+
+1. **Revise Pricing Strategies**: Consider competitive pricing or bundled offers for beauty products to overcome price sensitivity and increase purchase frequency.
+
+2. **Targeted Marketing**: Utilize customer demographics and purchase behavior to tailor marketing campaigns—e.g., promote beauty products to middle-aged customers and focus on high-revenue electronics buyers for premium upsells.
+
+3. **Seasonal Promotions**: Capitalize on identified peak sales months (July and February) with strategic discounts and inventory adjustments to maximize revenue.
+
+4. **Enhance Customer Loyalty**: Engage top-spending customers with personalized communications and rewards programs to encourage repeat business and referrals.
+
+5. **Optimize Store Hours and Staffing**: Align staffing and promotional activities with peak shopping hours (evenings) to improve customer experience and sales efficiency.
+
 ## Files in This Repository
 
 - `SQL Project 1 - Retail Sales Analysis.sql`: All SQL queries including data cleaning, exploration, and analysis
