@@ -225,7 +225,7 @@ creams to maintain their skin, hide the imperfections, oils and different gels t
 
 ### Customer Behavior
 
-**22. Understood which products do males and females buy the most?**
+**22. Understood which products do males and females buy the most**
 
 ```sql
 with gender_wise_purchase as (
