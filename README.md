@@ -106,7 +106,7 @@ where transactions_id is null or
 select count(transactions_id) as duplicate_transactions 
 from retail_sales group by transactions_id having count(transactions_id) > 1;
 ```
-**7. Checked for invalid or inconsistent values in `quantity`, `price_per_unit`, `cogs`, `total_sale','age' columns**
+**7. Checked for invalid or inconsistent values in `quantity`, `price_per_unit`, `cogs`, `total_sale`,`age` columns**
 ```sql
 select * from retail_sales
 where quantity <= 0 or
