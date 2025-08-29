@@ -36,6 +36,11 @@ The dataset consists of 2001 rows and 11 columns including the following:
 ## Database and Table Setup
 
 - Created a new database: `retail_sales`
+
+```
+create database retail_sales;
+use retail_sales;
+
 - Defined the schema for the `retail_sales` table with appropriate data types
 - Inserted dataset records for querying
 
