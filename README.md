@@ -116,7 +116,6 @@ where quantity <= 0 or
       price_per_unit <= 0 or
       cogs <= 0 or
       total_sale <= 0;
-      ;
 ```
 ```sql
 select * from retail_sales where age <= 0 or age > 105;
@@ -124,19 +123,54 @@ select * from retail_sales where age <= 0 or age > 105;
   
 - Verified time format consistency using `sale_time`
 ```sql
+select distinct sale_time from retail_sales limit 50;
+```
 ---
 
 ## Data Exploration
 
-Used SQL to understand the basic structure and characteristics of the data:
+Used SQL queries to understand the basic structure and characteristics of the data:
 
-- Total number of records after cleaning: 1987
-- Number of unique customers: 155
-- Product categories: Beauty, Clothing, Electronics
-- Customer age range: 18 to 64 years
-- Gender distribution and average customer age
-- Range of dates covered and the total period spanned in days and years
+- Found the total number of records after cleaning
+```sql
+select count(*) as no_of_sales from retail_sales;
+```
+- There were 1987 records remaining after cleaning the dataset
+  
+- Found out the number of unique customers
+```sql
+select count(distinct customer_id) as no_of_customers from retail_sales;
+```
+- There were 155 unique customers in the table
+  
+- Learnt about the product categories within the dataset
+```sql
+select count(distinct category) as no_of_categories from retail_sales;
+```
+```sql
+select distinct category from retail_sales;
+```
+- There were 3 product categories: 'Beauty', 'Clothing' and 'Electronics'
+  
+- Found out about the gender demographics of customers and how many fell into each gender category along with their average ages.
+```sql
+select gender, count(transactions_id) as no_of_customers, round(avg(age),2) as average_cust_age from retail_sales group by gender;
+```
+- There were 975 male customers, 1012 female customers and their average ages were around 41.
 
+- Understood customer age demographics
+  
+```sql
+select max(age) as oldest_cust, min(age) as youngest_cust from retail_sales;
+```
+- Understood the range of dates covered in the data and the total period spanned between the first and last transaction in days and years
+
+```sql
+select max(sale_date) as latest_sale_date, min(sale_date) as earliest_sale_date, 
+datediff(max(sale_date), min(sale_date)) as no_of_days,
+timestampdiff(year,min(sale_date),max(sale_date)) as no_of_years
+from retail_sales;
+```
 ---
 
 ## Data Analysis and Business Insights
