@@ -1,5 +1,9 @@
 # SQL Project - Retail Sales Analysis
 
+<p align="center">
+  <img src="Retail%20Image.jpg" alt="Retail Image" />
+</p>
+
 ## Project Overview
 
 This SQL project involves the analysis of a retail sales dataset to uncover actionable business insights. The dataset contains 2,001 records with key fields such as transaction date and time, customer demographics, product categories, quantities sold, cost of goods, and total revenue. The project is structured in three main phases: data cleaning, exploratory data analysis (EDA), and business insight generation. Data cleaning focused on removing null values, correcting data types, and identifying invalid records. EDA helped understand customer demographics, product distribution, and sales patterns. Using advanced SQL techniques such as subqueries, Common Table Expressions (CTEs), and window functions, the analysis provided insights into category performance, seasonal trends, customer behavior, and operational efficiency. These findings could then support strategic retail decisions around pricing, promotions, inventory, and customer engagement.
